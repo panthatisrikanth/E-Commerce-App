@@ -25,7 +25,7 @@ exports.signup = (req, res) => {
         email,
         hash_password,
         username: shortid.generate(),
-        role,
+        role:'super-admin',
       });
 
       _user.save((error, data) => {
